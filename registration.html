@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meata http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAMP</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+
+  <body class="registration-page">
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <a href="index.html" class="logo">YAMP</a>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="bedroom.html" class="nav-link">СПАЛЬНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="guest.html" class="nav-link">ГОСТИНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="kitchen.html" class="nav-link">КУХНЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="bathroom.html" class="nav-link">ВАННАЯ</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-navigation">
+            <ul class="nav-list-icons">
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openForm()">
+                  <img
+                    src="./img/icons/profile.png"
+                    alt="profile"
+                    class="nav-img"
+                  />
+                </button>
+              </li>
+
+              <li class="nav-item-icon">
+                <a href="cart.html" class="nav-link-icon">
+                  <img src="./img/icons/cart.png" alt="cart" class="nav-img" />
+                </a>
+              </li>
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openCityForm()">
+                  <img src="./img/icons/map.png" alt="cart" class="nav-img" />
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container-main">
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <label for="email" class="label"><b>Почта:</b></label>
+          <input
+            type="text"
+            placeholder="oleg@inbox.ru"
+            name="email"
+            required
+          />
+
+          <label for="psw" class="label"><b>Пароль:</b></label>
+          <input type="password" placeholder="password" name="psw" required />
+          <div class="submit-buttons-row">
+            <button type="submit" class="btn">Войти</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Закрыть
+            </button>
+          </div>
+          <div class="options-buttons">
+            <ul>
+              <li>
+                <a href="password-restore.html">Забыли пароль?</a>
+              </li>
+              <li>
+                <a href="registration.html">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="form-popup" id="city">
+        <form action="/action_page.php" class="form-container">
+          <label for="email" class="label"><b>Выберите город:</b></label>
+          <select>
+            <option value="Волгоград">Волгоград</option>
+            <option value="Волжский">Волжский</option>
+            <option value="Астрахань">Астрахань</option>
+          </select>
+
+          <div class="submit-buttons-row">
+            <button type="button" class="btn submit" onclick="submit()">
+              Подтвердить
+            </button>
+            <button type="button" class="btn cancel" onclick="closeCityForm()">
+              Закрыть
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="restore-form">
+        <form action="/action_page.php" class="form-container-registration">
+          <p><b>Регистрация</b></p>
+          <label for="email" class="label">Почта:</label>
+          <input
+            type="text"
+            placeholder="oleg@inbox.ru"
+            name="email"
+            required
+          />
+          <label for="psw" class="label">Пароль:</label>
+          <input type="password" placeholder="password" name="email" required />
+          <div class="restore-button">
+            <button type="submit" class="btn-restore">
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

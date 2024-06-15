@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meata http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAMP</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+
+  <body class="contact-page">
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <a href="index.html" class="logo">YAMP</a>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="bedroom.html" class="nav-link">СПАЛЬНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="guest.html" class="nav-link">ГОСТИНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="kitchen.html" class="nav-link">КУХНЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="bathroom.html" class="nav-link">ВАННАЯ</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-navigation">
+            <ul class="nav-list-icons">
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openForm()">
+                  <img
+                    src="./img/icons/profile.png"
+                    alt="profile"
+                    class="nav-img"
+                  />
+                </button>
+              </li>
+
+              <li class="nav-item-icon">
+                <a href="cart.html" class="nav-link-icon">
+                  <img src="./img/icons/cart.png" alt="cart" class="nav-img" />
+                </a>
+              </li>
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openCityForm()">
+                  <img src="./img/icons/map.png" alt="map" class="nav-img" />
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container-main">
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <label for="email" class="label"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="oleg@inbox.ru"
+            name="email"
+            required
+          />
+
+          <label for="psw" class="label"><b>Password</b></label>
+          <input type="password" placeholder="password" name="psw" required />
+          <div class="submit-buttons-row">
+            <button type="submit" class="btn">Войти</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Закрыть
+            </button>
+          </div>
+          <div class="options-buttons">
+            <ul>
+              <li>
+                <a href="password-restore.html">Забыли пароль?</a>
+              </li>
+              <li>
+                <a href="registration.html">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <div class="form-popup" id="city">
+        <form action="/action_page.php" class="form-container">
+          <label for="email" class="label"><b>Выберите город:</b></label>
+          <select>
+            <option value="Волгоград">Волгоград</option>
+            <option value="Волжский">Волжский</option>
+            <option value="Астрахань">Астрахань</option>
+          </select>
+
+          <div class="submit-buttons-row">
+            <button type="button" class="btn submit" onclick="submit()">
+              Подтвердить
+            </button>
+            <button type="button" class="btn cancel" onclick="closeCityForm()">
+              Закрыть
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main>
+      <div class="container-about">
+        <div class="about-img-container">
+          <img src="./img/main/about-us.svg" alt="about-us" class="about-img" />
+        </div>
+        <div class="about-text-container">
+          <h1 class="about-main-title">О НАС</h1>
+          <p class="about-text">
+            &emsp;&emsp;Мы – команда YAMP, серьезно отнсимся к мебели, которая
+            делает дом уютнее и красивее. В нашем интернет-магазине вы найдете
+            широкий выбор мебели для каждой комнаты: от стильных диванов и
+            кроватей до функциональных столов и шкафов.<br /><br />
+            &emsp;&emsp;Мы сотрудничаем только с проверенными производителями,
+            предлагая вам качественную мебель по доступным ценам. Наша миссия –
+            помочь вам создать идеальный дом, наполненный комфортом и стилем. Мы
+            делаем все возможное, чтобы ваш опыт покупок был максимально
+            приятным: от удобного онлайн-каталога до профессиональной
+            консультации и быстрой доставки. Доверьтесь нам, и ваш дом станет
+            настоящим оазисом спокойствия и уюта!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meata http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAMP</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-nav">
+          <a href="index.html" class="logo">YAMP</a>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="bedroom.html" class="nav-link">СПАЛЬНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="guest.html" class="nav-link">ГОСТИНАЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="kitchen.html" class="nav-link is-active">КУХНЯ</a>
+              </li>
+              <li class="nav-item">
+                <a href="bathroom.html" class="nav-link">ВАННАЯ</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-navigation">
+            <ul class="nav-list-icons">
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openForm()">
+                  <img
+                    src="./img/icons/profile.png"
+                    alt="profile"
+                    class="nav-img"
+                  />
+                </button>
+              </li>
+
+              <li class="nav-item-icon">
+                <a href="cart.html" class="nav-link-icon">
+                  <img src="./img/icons/cart.png" alt="cart" class="nav-img" />
+                </a>
+              </li>
+              <li class="nav-item-icon">
+                <button class="open-button" onclick="openCityForm()">
+                  <img src="./img/icons/map.png" alt="map" class="nav-img" />
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container-main">
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <label for="email" class="label"><b>Почта:</b></label>
+            <input
+              type="text"
+              placeholder="oleg@inbox.ru"
+              name="email"
+              required
+            />
+            <label for="psw" class="label"><b>Пароль:</b></label>
+            <input type="password" placeholder="password" name="psw" required />
+            <div class="submit-buttons-row">
+              <button type="submit" class="btn">Войти</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Закрыть
+              </button>
+            </div>
+            <div class="options-buttons">
+              <ul>
+                <li>
+                  <a href="password-restore.html">Забыли пароль?</a>
+                </li>
+                <li>
+                  <a href="registration.html">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-popup" id="city">
+          <form action="/action_page.php" class="form-container">
+            <label for="email" class="label"><b>Выберите город:</b></label>
+            <select>
+              <option value="Волгоград">Волгоград</option>
+              <option value="Волжский">Волжский</option>
+              <option value="Астрахань">Астрахань</option>
+            </select>
+
+            <div class="submit-buttons-row">
+              <button type="button" class="btn submit" onclick="submit()">
+                Подтвердить
+              </button>
+              <button
+                type="button"
+                class="btn cancel"
+                onclick="closeCityForm()"
+              >
+                Закрыть
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="main-img">
+          <img src="./img/main/kitchen.webp" alt="main" class="main-img" />
+        </div>
+        <div class="products">
+          <h1 class="main-title">МЕБЕЛЬ ДЛЯ КУХОННЫХ КОМНАТ</h1>
+          <div class="card-line">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/table-2.webp"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Стол обеденный<br />
+                    "Фостер"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>13000</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/table-5.jpg"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Стол обеденный<br />
+                    "Простой"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>5200</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/kuhonnyj-stol-mn-41.jpg"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Шкаф для посуды<br />
+                    напольный
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>8300</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/chair-2.jpg"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Кухонный стул<br />
+                    "Престиж"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>2560</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-line">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/chair-4.webp"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Кухонный стул<br />
+                    "Шарм"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>6900</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/cabinet-4.jpg"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Напольный шкаф<br />
+                    "Ксения"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>4550</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/cabinet-2.webp"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Шкаф навесной<br />
+                    "Топ"
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>17030</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="./img/products/cabinet.webp"
+                  alt="stol"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-discription">
+                <div class="card-title">
+                  <p>
+                    Кухонный<br />
+                    шкаф
+                  </p>
+                </div>
+                <div class="card-buy">
+                  <div class="card-price">
+                    <p>16000</p>
+                  </div>
+                  <button type="button" class="btn submit" onclick="submit()">
+                    <div class="card-cart-icon">
+                      <img
+                        src="./img/icons/cart.png"
+                        alt="cart"
+                        class="card-cart"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="header-nav">
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                  <div>ПОДДЕРЖКА</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">О НАС</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-navigation">
+            <ul class="nav-list-icons">
+              <li class="nav-item-icon">
+                <a
+                  href="https://instagram.com"
+                  class="nav-link-icon"
+                  target="_blank"
+                >
+                  <img
+                    src="./img/socials/insta.png"
+                    alt="cart"
+                    class="nav-img"
+                  />
+                </a>
+              </li>
+              <li class="nav-item-icon">
+                <a href="https://vk.ru" class="nav-link-icon" target="_blank">
+                  <img src="./img/socials/vk.png" alt="cart" class="nav-img" />
+                </a>
+              </li>
+              <li class="nav-item-icon">
+                <a
+                  href="https://facebook.com"
+                  class="nav-link-icon"
+                  target="_blank"
+                >
+                  <img
+                    src="./img/socials/facebook.png"
+                    alt="cart"
+                    class="nav-img"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
